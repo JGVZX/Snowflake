@@ -17,6 +17,10 @@ vamos a lo mas basico para que valla viendo como es que se a explicar los indici
 ![image](https://github.com/user-attachments/assets/c6182403-53f6-44ff-a058-6e3d9a3d3499)
 
 
+![image](https://github.com/user-attachments/assets/626b23a0-cbe9-43fa-a901-addf9cfb15cd)
+![image](https://github.com/user-attachments/assets/2152a61e-81ec-4f95-b619-aafb55a6e715)
+
+
 Recursosque se deben utilizar :
 •	Obtenga más información sobre dbt en los documentos
 •	Consulta Discourse para ver las preguntas y respuestas más frecuentes

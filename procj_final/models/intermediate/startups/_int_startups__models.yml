@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: int_companies
+    description: table of start up companies, one company per row
+    columns:
+    - name: company
+      description: primary key of int_companies
+      tests:
+        - unique
+        - not_null
+    - name: status
+      tests:
+        - accepted_values:
+            values:
+              - "Operating"
+              - "Exited"
+              - "Dead"
+  - name: int_founders
+    description: table of details about founders and companies they have founded
+    columns:
+      - name: founder
+        tests:
+          - not_null
+      - name: company
+        tests:
+          - not_null
+          - relationships:
+              field: company
+              to: ref('int_companies')
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - founder
+            - company
+  - name: int_investments
+    description: table of investments that companies have received, each company can have more than one investment
+    columns:
+      - name: company
+        tests:
+          - not_null
+          - relationships:
+              field: company
+              to: ref('int_companies')
+  - name: int_investors
+    description: table of investors and companies they have invested in, each company can have more than one investor
+    columns:
+      - name: company
+        tests:
+          - not_null
+          - relationships:
+              field: company
+              to: ref('int_companies')
+  - name: int_categories
+    description: table of companies and their categories, each company can have zero or more categories
+    columns:
+      - name: company
+        tests:
+          - not_null
+          - relationships:
+              field: company
+              to: ref('int_companies')

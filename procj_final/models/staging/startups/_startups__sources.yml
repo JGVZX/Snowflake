@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: startups
+    database: raw
+    tables:
+      - name: companies
+        description: raw data for some startup companies
+        columns:
+          - name: company
+            tests:
+              - unique
+              - not_null
+          - name: status
+            tests:
+              - accepted_values:
+                  values:
+                    - "Operating"
+                    - "Exited"
+                    - "Dead"
+      - name: founders
+        description: raw data for some founders of startup companies
+        columns:
+          - name: founder
+            tests:
+              - not_null
+          - name: company
+            tests:
+              - not_null

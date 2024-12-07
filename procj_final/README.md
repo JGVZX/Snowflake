@@ -10,6 +10,12 @@ vamos a lo mas basico para que valla viendo como es que se a explicar los indici
  ejecutar los siguientes comandos:
 •	ejecución dbt
 •	prueba dbt
+![image](https://github.com/user-attachments/assets/82d3276c-0642-4328-be56-217eb5e9b919)
+
+![image](https://github.com/user-attachments/assets/91872589-8a17-491e-86df-ab975c2c2f7f)
+
+![image](https://github.com/user-attachments/assets/c6182403-53f6-44ff-a058-6e3d9a3d3499)
+
 
 Recursosque se deben utilizar :
 •	Obtenga más información sobre dbt en los documentos
